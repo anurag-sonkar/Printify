@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  /* background-color: rgb(227, 227, 255); */
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.logo{
+  max-width: 8rem;
+  height: auto;
+}
+
+.menus{
+  /* display: flex; */
+  align-items: center;
+  gap: 1.5rem;
+  text-transform: capitalize;
+}
+
+.menuItem{
+  position: relative;
+  padding: 0.8rem 0.2rem;
+}
+.dropdown{
+  position: absolute;
+  top: 4rem;
+  border-radius: 2px;
+  padding: 0.6rem 0.2rem;
+  background-color: white;
+  z-index: -10;
+  box-shadow: -2px -2px 5px #e9e9e9 , 2px 2px 2px #ccc;
+  max-height: 0; 
+  overflow: hidden;
+  opacity: 0;
+   transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out; 
+}
+
+.dropdown-active{
+   max-height: 300px; 
+  opacity: 1; 
+}
+.dropdown-hidden{
+   max-height: 0; 
+  opacity: 0; 
+
+}
+
+.dropItems{
+  /* background-color: wheat; */
+  padding: 0.3rem 0.8rem;
+  
+}
+
+
+.dropItems:hover, .menuItem:hover{
+  color: green;
+  cursor: pointer;
+}
+
+
+/* for responsive navbar hamburger */
+.expandBtn:active{
+  /* border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 0 0.2rem; */
+
+}
+
+.slider {
+  width: 300px; 
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -320px; 
+  background-color: white;
+  box-shadow: 2px 2px 5px #ccc;
+  overflow: hidden;
+  /* opacity: 0; */
+  transition: all 0.4s ease-in-out; /* Smooth transition for both left and opacity */
+}
+
+.slider-active {
+  left: 0; /* Move the slider into view */
+  opacity: 1; /* Make it fully visible */
+}
+
+.overlay-active {
+  background-color: rgba(165, 165, 165, 0.245); /* Semi-transparent gray background */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9; /* Ensure it covers content but not the slider */
+}
+
+
+
+
+
+@media (max-width: 320px) {
+            .slider {
+                width: 250px;
+            }
+        }
+
+.home{
+  padding-top: 4rem;
+}
