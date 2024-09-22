@@ -25,8 +25,10 @@ const images = [
 
 function Hero() {
     return (
-        <div className='hero relative py-12 px-0 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 place-items-center lg:gap-6 gap-16 overflow-hidden'>
+        <div className='hero relative my-12 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 place-items-center lg:gap-6 gap-16'>
 
+            {/* Grey background strip */}
+            <img src='/assets/hero/background.svg' alt="Background" className='flex absolute top-0 right-0 -z-10 w-[50vw]' />
 
             {/* left-container */}
             <div className='col-span-1 flex gap-6 flex-col'>
@@ -61,7 +63,10 @@ function Hero() {
                 </div>
 
                 {/* Grey background strip */}
-                <div className='absolute -top-56 -right-96 bg-gray-200 lg:h-[200vh] lg:w-[25vw] md:h-[300vh] md:w-[35vw] h-[600vh] w-[55vw] origin-top rotate-45 -skew-y-12 -z-20'></div> {/* Positioned behind the content */}
+                {/* <div className='absolute -top-56 -right-96 bg-gray-200 lg:h-[200vh] lg:w-[25vw] md:h-[300vh] md:w-[35vw] h-[600vh] w-[55vw] origin-top rotate-45 -skew-y-12 -z-20'></div>  */}
+                    
+                    
+
 
             </div>
 
