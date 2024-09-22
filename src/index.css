@@ -138,15 +138,24 @@ body{
   z-index: 9; /* Ensure it covers content but not the slider */
 }
 
-
-
-
-
 @media (max-width: 320px) {
             .slider {
                 width: 250px;
             }
 }
+
+
+/*error page */
+.errorText{
+  color: var(--primary-color);
+}
+
+.errorBg{
+  
+  background-color: var(--primary-color);
+}
+
+
 
 .home{
   padding-top: 5rem;
