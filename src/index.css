@@ -175,3 +175,11 @@ body{
             }
 }
 
+/*  */
+
+
+
+.check:hover{
+  scale: 1.1;
+}
+
