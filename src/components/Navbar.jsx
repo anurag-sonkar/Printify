@@ -5,7 +5,9 @@ import { FaCaretDown } from "react-icons/fa";
 import { menuItems } from '../menuItems';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-
+import Button from './Button';
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -16,14 +18,16 @@ function Navbar() {
     setOpenIndex(openIndex === index ? null : index); // Toggle the dropdown
   };
 
+  // getting primary color from CSS variablesss (react-icon color set)
+  const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
 
 
   return (
     <div className={`${showSlider ? "overlay-active" : ""}`}>
-      <nav className='navbar' onMouseLeave={() => setOpenIndex(null)}>
+      <nav className='navbar lg:px-8 lg:py-2 md:px-8 md:py-2 px-4 py-2' onMouseLeave={() => setOpenIndex(null)}>
         <div className='flex items-center gap-10'>
           <div className='expandBtn lg:hidden block' onClick={() => setShowSlider(true)}>
-            <RxHamburgerMenu size={30} />
+            <RxHamburgerMenu size={30} color={primaryColor} />
           </div>
           <div className='logo'>
             <img src='assets/logo.svg' />
@@ -34,12 +38,12 @@ function Navbar() {
                 return <div key={index} className='menu-container'
                   onMouseEnter={() => setOpenIndex(index)}
                 >
-                  <div className='flex items-center'>
+                  <Link to={item.href} className='flex items-center'>
                     <div className='menuItem'>{item.title}</div>
                     {item.submenu?.length > 0 && (
                       openIndex === index ? <FaCaretUp /> : <FaCaretDown />
                     )}
-                  </div>
+                  </Link>
                   {item.submenu?.length > 0 && <Dropdown items={item.submenu} show={openIndex === index} />}
                 </div>
               })
@@ -48,9 +52,9 @@ function Navbar() {
           </div>
         </div>
 
-        <div className='flex gap-2'>
-          <button>Signup</button>
-          <button>login</button>
+        <div className='flex gap-2 items-center'>
+          <Button variant='outlined' style={{ fontWeight: "500" }}>Log in</Button>
+          <Button bgColor="primary" variant="filled" style={{ fontWeight: "500", color: "#fff" }}>Signup</Button>
         </div>
 
         {/* for md sm hamburger menu */}
@@ -62,12 +66,12 @@ function Navbar() {
           <div className='menus'>
             {menuItems && menuItems.map((item, index) => (
               <div key={index} className='menu-container'>
-                <div className='flex items-center px-8' onClick={() => handleMenuClick(index)}>
+                <Link to={item.href} className='flex items-center px-8' onClick={() => handleMenuClick(index)}>
                   <div className='menuItem'>{item.title}</div>
                   {item.submenu?.length > 0 && (
                     openIndex === index ? <FaCaretUp /> : <FaCaretDown />
                   )}
-                </div>
+                </Link>
                 <div className='relative'>
                   {item.submenu?.length > 0 && (
                     <Dropdown items={item.submenu} show={openIndex === index} />
