@@ -26,8 +26,9 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   box-shadow: 1px 1px 8px #e7e7e7;
+  background-color: white;
 }
 
 .logo{
@@ -156,7 +157,21 @@ body{
 }
 
 
-
+/*home*/
 .home{
   padding-top: 5rem;
 }
+
+.hero-btn{
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* home > hero section*/
+@media (max-width: 800px) {
+            .hero {
+                padding: 1rem 2rem 5rem 2rem;
+            }
+}
+

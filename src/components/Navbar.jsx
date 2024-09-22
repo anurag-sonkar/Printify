@@ -6,7 +6,6 @@ import { menuItems } from '../menuItems';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 import Button from './Button';
-import { FaRegCirclePlay } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 
