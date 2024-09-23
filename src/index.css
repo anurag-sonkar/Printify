@@ -191,7 +191,7 @@ body{
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .connect {
     background-image: url('assets/connect/stores-background.svg');
     background-repeat: no-repeat;
