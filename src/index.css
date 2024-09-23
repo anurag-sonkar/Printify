@@ -212,4 +212,31 @@ body{
 }
 
 
+/*review*/
+.custom-arrow {
+    position: absolute;
+    top: 100%;
+    transform: translateY(50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.custom-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+}
+
+
 

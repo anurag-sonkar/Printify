@@ -97,7 +97,7 @@ function Footer() {
         </div>
 
         {/* footer-section-2/3 */}
-        <div className='links grid lg:grid-cols-4 grid-col-2 grid-flow-col lg:grid-rows-1 grid-rows-2  lg:justify-between md:justify-normal justify-between'>
+        <div className='links grid lg:grid-cols-4 grid-col-2 grid-flow-col lg:grid-rows-1 grid-rows-2  lg:justify-between md:justify-normal justify-between lg:gap-40 gap-0 py-20'>
           {
             footerLinks?.map((footerLink, index) => <div key={index} className='flex flex-col'>
               <h1 className='footerHeadings'>{footerHeadings?.[index]}</h1>

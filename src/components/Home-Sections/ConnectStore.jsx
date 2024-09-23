@@ -49,7 +49,7 @@ const connections = [
 ]
 function ConnectStore() {
   return (
-      <div className=''>
+      <div className='py-24'>
           <div className='relative w-full h-screen grid place-items-center'>
               <img src='assets/connect/arrow.png' alt="Background" className='flex absolute top-0 lg:right-[35%] -z-10 w-80 ' />
               {/* center main logo */}
