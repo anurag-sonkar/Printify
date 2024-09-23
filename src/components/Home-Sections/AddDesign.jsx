@@ -1,31 +1,9 @@
 import React from 'react'
 import { GoArrowRight } from "react-icons/go";
-import AddDesignCard from '../AddDesignCard';
+import AddDesignCard from '../miscellaneous/AddDesignCard';
 import Slider from "react-slick";
+import { cards } from '../../data/addDesign';
 
-const cards = [
-    {
-        image : "assets/addDesign/custom-products-new.webp",
-        heading1 : "create",
-        heading2: "custom products",
-        para: "Easily add your designs to a wide range of products using our free tools"
-
-    },
-    {
-        image: "assets/addDesign/your-products.webp",
-        heading1 : "sell",
-        heading2: "on your terms",
-        para: "You choose the products, sale price, and where to sell"
-        
-    },
-    {
-        image: "assets/addDesign/fullfillment.webp",
-        heading1 : "we handle",
-        heading2: "fullfillment",
-        para: "Easily add your designs to a wide range of products using our free tools"
-
-    },
-]
 
 function AddDesign() {
     const settings = {
@@ -35,7 +13,7 @@ function AddDesign() {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    
+
     return (
         <div className='bg-[#F7F7F7] -mb-1 design w-full design lg:px-12 px-4 py-32  '>
             <div className='bg-white flex items-center justify-between lg:flex-row flex-col rounded-3xl overflow-hidden'>
@@ -58,19 +36,19 @@ function AddDesign() {
             {/* lg - only */}
             <div className='lg:flex hidden py-28 px-6 justify-center gap-12'>
                 {
-                    cards?.length > 0 && cards.map((card , index)=><AddDesignCard key={index} {...card}/>)
+                    cards?.length > 0 && cards.map((card, index) => <AddDesignCard key={index} {...card} />)
                 }
             </div>
             {/* md , sm */}
 
             <div className='lg:hidden block lg:w-1/3 mx-auto text-center py-28'>
-            <div className='slider-container'>
-                <Slider {...settings}>
-                {
-                    cards?.length > 0 && cards.map((card , index)=><AddDesignCard key={index} {...card}/>)
-                }
-                </Slider>
-            </div>
+                <div className='slider-container'>
+                    <Slider {...settings}>
+                        {
+                            cards?.length > 0 && cards.map((card, index) => <AddDesignCard key={index} {...card} />)
+                        }
+                    </Slider>
+                </div>
             </div>
         </div>
     )

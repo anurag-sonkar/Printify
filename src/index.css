@@ -216,7 +216,7 @@ body{
 /* footer-section-2/3 */
 @media (max-width : 400px) {
   .links{
-    gap: 6rem;
+    gap: 3rem;
   }
   
 }

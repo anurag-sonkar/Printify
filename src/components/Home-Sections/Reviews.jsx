@@ -1,48 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Slider from "react-slick";
-import ReviewCard from '../ReviewCard';
+import ReviewCard from '../miscellaneous/ReviewCard';
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
-
-
-const reviews = [
-    {
-        avatar: "assets/reviews/robert-voltaire.png",
-        name : "robert a. voltair",
-        ratings : 5,
-        comment: "Printify has been an incredible service for us musicians unable to keep large amount of inventory - now we can create designs previously too expensive to print without having to have 1,000 shirts in our jam space. Thanks Printify! " 
-    },
-    {
-        avatar: "assets/reviews/quinten-barney.png",
-        name : "robert a. voltair",
-        ratings : 3,
-        comment: "Printify has been an incredible service for us musicians unable to keep large amount of inventory - now we can create designs previously too expensive to print without having to have 1,000 shirts in our jam space. Thanks Printify! " 
-    },
-    {
-        avatar: "assets/reviews/spencer-brett-kyle.png",
-        name : "robert a. voltair",
-        ratings : 4,
-        comment: "Printify has been an incredible service for us musicians unable to keep large amount of inventory - now we can create designs previously too expensive to print without having to have 1,000 shirts in our jam space. Thanks Printify! " 
-    },
-    {
-        avatar : "assets/reviews/nikki.png",
-        name : "robert a. voltair",
-        ratings : 5,
-        comment: "Printify has been an incredible service for us musicians unable to keep large amount of inventory - now we can create designs previously too expensive to print without having to have 1,000 shirts in our jam space. Thanks Printify! " 
-    },
-    {
-        avatar: "assets/reviews/april-showers.jpeg",
-        name : "robert a. voltair",
-        ratings : 4,
-        comment: "Printify has been an incredible service for us musicians unable to keep large amount of inventory - now we can create designs previously too expensive to print without having to have 1,000 shirts in our jam space. Thanks Printify! " 
-    },
-]
+import { reviews } from '../../data/reviews';
 
 const NextArrow = (props) => {
     const { onClick } = props;
     return (
         <div className="next-arrow custom-arrow" onClick={onClick}>
-            <GrNext size={18}/>
+            <GrNext size={18} />
         </div>
     );
 };
@@ -51,7 +18,7 @@ const PrevArrow = (props) => {
     const { onClick } = props;
     return (
         <div className="prev-arrow custom-arrow" onClick={onClick}>
-            <GrPrevious size={18}/>
+            <GrPrevious size={18} />
         </div>
     );
 };
@@ -124,32 +91,32 @@ function Reviews() {
         };
     }, []);
 
-  return (
-      <div className='py-36 px-12 bg-[#F7F7F7]'>
-        {/* 1/2 */}
-        {/* <div className='flex items-center justify-start flex-wrap gap-9'>
+    return (
+        <div className='py-36 px-12 bg-[#F7F7F7]'>
+            {/* 1/2 */}
+            {/* <div className='flex items-center justify-start flex-wrap gap-9'>
               <div className='text-5xl font-bold lg:max-w-[40vw]'>Trusted by over 8M sellers around the world</div>
               <div className='lg:max-w-96  text-gray-600'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</div>
         </div> */}
-          <div className='flex items-center justify-start flex-wrap gap-9 px-4'>
-              <div className='text-5xl font-bold lg:max-w-[40vw]'>Trusted by over 8M sellers around the world</div>
-              <div
-                  ref={textRef}
-                  className={`lg:max-w-96 text-gray-600 transition-transform duration-1000 ease-in-out ${isVisible ? 'lg:translate-x-0' : 'lg:-translate-x-full'}`}
-              >
-                  Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.
-              </div>
-          </div>
-        {/* 2/2 */}
-          <div className="slider-container py-20">
-              <Slider {...settings}>
-                  {
-                    reviews?.length > 0 && reviews.map((review , index)=><ReviewCard key={index} {...review} />)
-                  }
-              </Slider>
-          </div>
-      </div>
-  )
+            <div className='flex items-center justify-start flex-wrap gap-9 lg:px-4 px-0'>
+                <div className='text-5xl font-bold lg:max-w-[40vw] '>Trusted by over 8M sellers around the world</div>
+                <div
+                    ref={textRef}
+                    className={`lg:max-w-96 text-gray-600 transition-transform duration-1000 ease-in-out ${isVisible ? 'lg:translate-x-0' : 'lg:-translate-x-full'}`}
+                >
+                    Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.
+                </div>
+            </div>
+            {/* 2/2 */}
+            <div className="slider-container py-20">
+                <Slider {...settings}>
+                    {
+                        reviews?.length > 0 && reviews.map((review, index) => <ReviewCard key={index} {...review} />)
+                    }
+                </Slider>
+            </div>
+        </div>
+    )
 }
 
 export default Reviews

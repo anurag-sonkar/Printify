@@ -1,27 +1,10 @@
 import React from 'react'
 import { FaCheck, FaRegCirclePlay } from "react-icons/fa6";
-import Button from '../Button';
-import Carousel from '../Carousel';
-import image from "/assets/hero/caro1.webp"
-import image2 from "/assets/hero/caro2.webp"
-import image3 from "/assets/hero/caro3.png"
-import image4 from "/assets/hero/caro4.webp"
-{/* <Button bgColor="red" variant="filled" icon={<FaRegCirclePlay />} style={{ padding: "20px 10px" }}>Signup</Button> */ }
+import Button from '../miscellaneous/Button';
+import Carousel from '../miscellaneous/Carousel';
+import {checkPoints , images} from "../../data/hero"
 
-const checkPoints = [
 
-    " 100% Free to use",
-    "900+ High - Quality Products",
-    "Largest global print network"
-
-]
-
-const images = [
-    image,
-    image2,
-    image3,
-    image4
-]
 
 function Hero() {
     return (
@@ -64,8 +47,8 @@ function Hero() {
 
                 {/* Grey background strip */}
                 {/* <div className='absolute -top-56 -right-96 bg-gray-200 lg:h-[200vh] lg:w-[25vw] md:h-[300vh] md:w-[35vw] h-[600vh] w-[55vw] origin-top rotate-45 -skew-y-12 -z-20'></div>  */}
-                    
-                    
+
+
 
 
             </div>

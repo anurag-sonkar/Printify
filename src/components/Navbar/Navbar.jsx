@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import Dropdown from './Dropdown'
+import Dropdown from './Dropdown';
 import { FaCaretUp } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
-import { menuItems } from '../menuItems';
+import { menuItems} from '../../data/navbar';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-import Button from './Button';
 import { Link } from 'react-router-dom';
+import Button from '../miscellaneous/Button';
 
 
 function Navbar() {
