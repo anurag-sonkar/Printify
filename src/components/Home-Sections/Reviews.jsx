@@ -133,7 +133,7 @@ function Reviews() {
               <div className='text-5xl font-bold lg:max-w-[40vw]'>Trusted by over 8M sellers around the world</div>
               <div className='lg:max-w-96  text-gray-600'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</div>
         </div> */}
-          <div className='flex items-center justify-start flex-wrap gap-9'>
+          <div className='flex items-center justify-start flex-wrap gap-9 px-4'>
               <div className='text-5xl font-bold lg:max-w-[40vw]'>Trusted by over 8M sellers around the world</div>
               <div
                   ref={textRef}
