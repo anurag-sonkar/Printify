@@ -183,3 +183,33 @@ body{
   scale: 1.1;
 }
 
+
+/* footer-section-2/3 */
+@media (max-width : 400px) {
+  .links{
+    gap: 6rem;
+  }
+  
+}
+
+.footerHeadings{
+  font-weight: 500;
+  padding: 1rem 0rem;
+  font-size: larger;
+  width: 6.5rem;
+}
+
+.footerLinks{
+  display: block;
+  margin: 0.4rem 0;
+  font-size: small;
+}
+
+
+.footerLinks:hover{
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+
+

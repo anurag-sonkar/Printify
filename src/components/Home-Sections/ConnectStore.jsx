@@ -51,13 +51,13 @@ function ConnectStore() {
   return (
       <div className=''>
           <div className='relative w-full h-screen grid place-items-center'>
-              <img src='/assets/connect/arrow-down.png' alt="Background" className='flex absolute top-0 lg:right-[35%] -z-10 w-80 ' />
+              <img src='assets/connect/arrow.png' alt="Background" className='flex absolute top-0 lg:right-[35%] -z-10 w-80 ' />
               {/* center main logo */}
               <ConnectionCard image={"assets/connect/printify.svg"} bgColor="primary" />
 
               {/* other logo's connection */}
               {
-                  connections.map(({ storename, logo, position, size }) => <div className='connect-logo absolute' style={{ top: position.top, left: position.left }}>
+                  connections.map(({ storename, logo, position, size },index) => <div key={index} className='connect-logo absolute' style={{ top: position.top, left: position.left }}>
                       <ConnectionCard image={logo} bgColor="white" size={size} />
 
                   </div>)
