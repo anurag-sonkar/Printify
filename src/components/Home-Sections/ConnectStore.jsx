@@ -122,13 +122,13 @@ function ConnectStore() {
         <div ref={connectStoreRef} className='relative w-[100%] pb-40'>
             <div className='w-full flex justify-center'>
                 <img src='assets/connect/arrow-down.png' alt="Background" className='flex absolute w-80 -z-10' />
-                <div className='pt-28 flex justify-center items-center flex-col gap-6'>
+                <div className='pt-32 px-12 text-center flex justify-center items-center flex-col gap-6'>
                     <h1 className='font-semibold text-5xl'>Connect your store</h1>
                     <div className='text-gray-400'>Printify easily integrates with major e-commerce platforms and marketplaces</div>
                 </div>
             </div>
 
-            <div className={`connect relative w-full h-screen grid place-items-center ${isAnimated ? 'animated' : ''}`}>
+            <div className={`connect relative w-full h-screen grid place-items-center ${isAnimated ? 'animated' : ''} lg:overflow-hidden md:overflow-hidden overflow-x-scroll`}>
                 {/* center main logo */}
                 <div className='z-50'>
                     <ConnectionCard image={"assets/connect/printify.svg"} bgColor="primary" />
@@ -138,7 +138,7 @@ function ConnectStore() {
                 {connections.map(({ storename, logo, position, size }, index) => (
                     <div
                         key={index}
-                        className={`connect-logo ${isAnimated ? 'animated' : ''} -z-50`}
+                        className={`connect-logo ${isAnimated ? 'animated' : ''} -z-50 `}
                         style={{
                             top: isAnimated ? position.top : '50%',
                             left: isAnimated ? position.left : '50%',

@@ -285,5 +285,19 @@ body{
   font-weight: 500;
 }
 
+.heading1{
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.heading2{
+  font-size: 1.1rem;
+  text-transform: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
 
 

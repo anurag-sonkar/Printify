@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ReviewCard from '../ReviewCard';
 import { GrNext } from "react-icons/gr";
