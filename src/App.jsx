@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Layout from './components/Layout'
 import Error from './pages/Error'
 function App() {
+  
   return (
     <Routes>
       <Route path='/' Component={Layout}>

@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ReviewCard({ avatar,ratings,comment,name }) {
-    console.log(avatar, ratings, comment)
     return (
         <div className='rounded-2xl lg:px-10 lg:py-10 md:px-10 md:py-10 px-4 py-5 bg-white mx-3 grid lg:gap-10 md:gap-10 gap-6'>
             <div className='flex gap-8'>

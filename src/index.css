@@ -198,13 +198,13 @@ body{
     background-position: center center;
     z-index: -20;
     opacity: 0;
-    transform: scale(0.5); /* Start the background image smaller */
-    transition: all 1s ease-in-out;
+    transform: scale(0.5); 
+    transition: all 0.5s ease-in-out;
   }
 
   .connect.animated {
     opacity: 1;
-    transform: scale(1); /* Grow to full size smoothly */
+    transform: scale(1); 
   }
 }
 
@@ -265,6 +265,24 @@ body{
     align-items: center;
     position: relative;
     padding-top: 10px;
+}
+
+
+/* add design*/
+.design{
+  background-image: url('assets/addDesign/arrow-down.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.design-bg{
+  background-color: var(--primary-color);
+
+}
+
+.allProducts-btn{
+  color: var(--primary-color);
+  font-weight: 500;
 }
 
 

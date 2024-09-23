@@ -119,7 +119,7 @@ function ConnectStore() {
     }, []);
 
     return (
-        <div ref={connectStoreRef} className='relative py-24'>
+        <div ref={connectStoreRef} className='relative w-[100%] pb-40'>
             <div className='w-full flex justify-center'>
                 <img src='assets/connect/arrow-down.png' alt="Background" className='flex absolute w-80 -z-10' />
                 <div className='pt-28 flex justify-center items-center flex-col gap-6'>
@@ -130,13 +130,15 @@ function ConnectStore() {
 
             <div className={`connect relative w-full h-screen grid place-items-center ${isAnimated ? 'animated' : ''}`}>
                 {/* center main logo */}
-                <ConnectionCard image={"assets/connect/printify.svg"} bgColor="primary" />
+                <div className='z-50'>
+                    <ConnectionCard image={"assets/connect/printify.svg"} bgColor="primary" />
+                </div>
 
                 {/* other logos */}
                 {connections.map(({ storename, logo, position, size }, index) => (
                     <div
                         key={index}
-                        className={`connect-logo ${isAnimated ? 'animated' : ''}`}
+                        className={`connect-logo ${isAnimated ? 'animated' : ''} -z-50`}
                         style={{
                             top: isAnimated ? position.top : '50%',
                             left: isAnimated ? position.left : '50%',
